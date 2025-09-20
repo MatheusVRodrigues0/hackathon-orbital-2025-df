@@ -18,7 +18,7 @@ public class CustomerController {
     private CustomerService service;
 
     @PostMapping
-    public CustomerOutput create(@RequestBody CustomerInput input) {
+    public CustomerOutput create(@RequestBody @Valid CustomerInput input) {
         return service.create(input);
     }
 
